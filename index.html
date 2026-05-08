@@ -58,6 +58,19 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
 .proj .year{font-size:.78rem;color:#c00;font-weight:600}
 .proj .desc{font-size:.85rem;color:#444;margin-top:4px;line-height:1.5}
 
+/* ===== FORM ===== */
+.interest-form{background:#fff;border:1px solid #ccc;padding:24px;margin-top:16px}
+.interest-form label{display:block;font-size:.82rem;font-weight:600;color:#333;margin-bottom:4px;margin-top:12px}
+.interest-form label:first-child{margin-top:0}
+.interest-form input,.interest-form textarea,.interest-form select{width:100%;padding:8px 10px;border:1px solid #ccc;font-size:.85rem;font-family:inherit;background:#fff}
+.interest-form textarea{resize:vertical;min-height:70px}
+.interest-form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:500px){.interest-form .row{grid-template-columns:1fr}}
+.interest-form .checkboxes label{font-weight:400;font-size:.82rem;display:flex;align-items:center;gap:6px;margin:4px 0}
+.interest-form .checkboxes input[type=checkbox]{width:auto}
+.interest-form button{background:#c00;color:#fff;border:none;padding:10px 24px;font-size:.85rem;font-weight:600;cursor:pointer;margin-top:16px;transition:background .2s}
+.interest-form button:hover{background:#900}
+
 .sidebar .box{border:1px solid #ccc;margin-bottom:16px;background:#fff}
 .sidebar .box h3{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#c00;background:#f0f0f0;padding:10px 14px;border-bottom:1px solid #ccc}
 .sidebar .box .inner{padding:12px 14px}
@@ -78,7 +91,7 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
 <div class="topbar">
 <div class="wrap">
   <span>(734) 454-4187</span>
-  <a href="mailto:mike@reconenterprises.net">mike@reconenterprises.net</a>
+  <a href="mailto:Office@reconenterprises.net">Office@reconenterprises.net</a>
 </div>
 </div>
 
@@ -88,6 +101,7 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#teamup">Team Up</a>
     <a href="#contact">Contact</a>
   </nav>
 </div>
@@ -98,6 +112,7 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
   <a href="#about">About</a>
   <a href="#projects">Projects</a>
   <a href="#services">Services</a>
+  <a href="#teamup">Team Up</a>
   <a href="#contact">Contact</a>
 </div>
 </div>
@@ -105,7 +120,7 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
 <div class="hero">
 <div class="wrap">
   <h1>Michigan general contractor. <em>Multi-family</em> renovation and rehabilitation.</h1>
-  <p>Partners with general contractors, developers, and property owners on large-scale renovation projects. Full-building rehabs, unit turns, exterior and interior upgrades. Michigan, Ohio, Pennsylvania, Maryland.</p>
+  <p>Women-owned business specializing in multi-family renovation. Partners with GCs, developers, and property owners on large-scale projects. MSHDA, HUD, Section 3. Michigan, Ohio, Pennsylvania, Maryland.</p>
 </div>
 </div>
 
@@ -114,8 +129,8 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
 <div class="content">
 
   <h2 id="about">About</h2>
-  <p>Recon Enterprises is a women-owned general contractor specializing in multi-family renovation and rehabilitation. We work exclusively with GCs, developers, and property owners on large-scale projects.</p>
-  <p>We have extensive experience with affordable housing programs including MSHDA, HUD, and Section 3 compliance. Our team understands the requirements and regulations that come with publicly funded projects.</p>
+  <p>Recon Enterprises is a women-owned general contractor specializing in multi-family renovation and rehabilitation. We work exclusively with GCs, developers, and property owners on large-scale affordable housing projects.</p>
+  <p>We have extensive experience with affordable housing programs including MSHDA, HUD, and Section 3. Our team is experienced with the requirements and regulations that come with publicly funded projects.</p>
   <p>We started small, moved into larger work, and now manage multiple concurrent jobs across several states. We are selective about the work we take. The same GCs keep calling us back.</p>
   <p>Every project gets pre-construction planning, daily coordination, and a clean closeout. One point of contact, clear answers, no runaround.</p>
 
@@ -210,14 +225,50 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
     <div class="client">Detroit, MI &mdash; 78 townhome units</div>
   </div>
 
+  <!-- ===== TEAM UP FORM ===== -->
+  <h2 id="teamup" style="margin-top:24px">Team Up With Us</h2>
+  <p>We are always looking for qualified subcontractors and crew to partner with on upcoming projects. If you or your company are interested in working with Recon Enterprises, fill out the form below and we will reach out.</p>
+
+  <form class="interest-form" action="mailto:Office@reconenterprises.net" method="post" enctype="text/plain">
+    <div class="row">
+      <div>
+        <label>Company Name</label>
+        <input type="text" name="Company" required />
+      </div>
+      <div>
+        <label>Contact Name</label>
+        <input type="text" name="Contact" required />
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label>Email</label>
+        <input type="email" name="Email" required />
+      </div>
+      <div>
+        <label>Phone</label>
+        <input type="tel" name="Phone" />
+      </div>
+    </div>
+    <label>I am interested in (check all that apply)</label>
+    <div class="checkboxes">
+      <label><input type="checkbox" name="Trade" value="Concrete/Asphalt" /> Concrete / Asphalt</label>
+      <label><input type="checkbox" name="Trade" value="Cabinet Installers" /> Cabinet Installers</label>
+      <label><input type="checkbox" name="Trade" value="General Labor" /> General Labor</label>
+      <label><input type="checkbox" name="Trade" value="Project Manager" /> Project Manager</label>
+      <label><input type="checkbox" name="Trade" value="Site Superintendent" /> Site Superintendent</label>
+    </div>
+    <label>Tell us about your company</label>
+    <textarea name="About" placeholder="Years in business, project experience, areas served, insurance limits..."></textarea>
+    <button type="submit">Submit Interest</button>
+  </form>
+
   <h2 id="contact" style="margin-top:24px">Contact</h2>
-  <p><strong>Michael Reoch</strong><br />Managing Director</p>
-  <p><a href="tel:7344544187" style="color:#c00;text-decoration:none;font-weight:600">(734) 454-4187</a><br />
-  <a href="mailto:mike@reconenterprises.net" style="color:#c00;text-decoration:none;font-weight:600">mike@reconenterprises.net</a></p>
+  <p>Office: (734) 454-4187</p>
+  <p><a href="mailto:Office@reconenterprises.net" style="color:#c00;text-decoration:none;font-weight:600">Office@reconenterprises.net</a></p>
   <p>36761 Amrhein Rd &bull; Livonia, MI 48150</p>
   <p>Service areas: Michigan &bull; Ohio &bull; Pennsylvania &bull; Maryland</p>
-
-  <p style="margin-top:16px;font-size:.8rem;color:#888">2,734+ units renovated since 2020</p>
+  <p style="margin-top:16px;font-size:.8rem;color:#888">Women-Owned Business &bull; 2,774+ units renovated since 2020</p>
 
 </div>
 
@@ -226,11 +277,24 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
   <div class="box">
     <h3>Contact</h3>
     <div class="inner contact">
-      <p><strong>Michael Reoch</strong></p>
-      <p>Managing Director</p>
-      <p style="margin-top:6px"><a href="tel:7344544187">(734) 454-4187</a></p>
-      <p><a href="mailto:mike@reconenterprises.net">mike@reconenterprises.net</a></p>
+      <p><a href="tel:7344544187">(734) 454-4187</a></p>
+      <p><a href="mailto:Office@reconenterprises.net">Office@reconenterprises.net</a></p>
       <p style="margin-top:8px">36761 Amrhein Rd<br />Livonia, MI 48150</p>
+    </div>
+  </div>
+
+  <div class="box">
+    <h3>Looking to Team Up?</h3>
+    <div class="inner">
+      <p style="font-size:.82rem;margin-bottom:8px">We are currently seeking:</p>
+      <ul>
+        <li>Concrete / Asphalt</li>
+        <li>Cabinet Installers</li>
+        <li>General Labor</li>
+        <li>Project Managers</li>
+        <li>Site Superintendents</li>
+      </ul>
+      <p style="margin-top:8px"><a href="#teamup" style="color:#c00;font-weight:600;font-size:.82rem">Fill out our form &rarr;</a></p>
     </div>
   </div>
 
@@ -254,7 +318,7 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
     <h3>Portfolio Summary</h3>
     <div class="inner">
       <p style="font-size:.9rem;font-weight:700;color:#c00">12 Projects</p>
-      <p style="font-size:.8rem">2,734+ units renovated since 2020 across MI, PA, MD, OH</p>
+      <p style="font-size:.8rem">2,774+ units renovated since 2020 across MI, PA, MD, OH</p>
     </div>
   </div>
 
@@ -271,6 +335,17 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
   </div>
 
   <div class="box">
+    <h3>Software</h3>
+    <div class="inner">
+      <ul>
+        <li>Procore</li>
+        <li>Building Connected</li>
+        <li>Smartsheet</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box">
     <h3>Service Areas</h3>
     <div class="inner">
       <ul>
@@ -278,17 +353,6 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
         <li>Ohio</li>
         <li>Pennsylvania</li>
         <li>Maryland</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="box">
-    <h3>Software</h3>
-    <div class="inner">
-      <ul>
-        <li>Procore</li>
-        <li>Building Connected</li>
-        <li>Smartsheet</li>
       </ul>
     </div>
   </div>
