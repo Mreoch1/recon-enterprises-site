@@ -84,13 +84,14 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
 .sidebar .contact a{color:#c00;text-decoration:none;font-weight:600}
 
 .footer{background:#000;color:rgba(255,255,255,.5);padding:24px;text-align:center;font-size:.78rem;border-top:4px solid #c00}
+.tel{white-space:nowrap;unicode-bidi:bidi-override;direction:rtl}
 </style>
 </head>
 <body>
 
 <div class="topbar">
 <div class="wrap">
-  <span>(734) 454-4187</span>
+  <span class="tel">7814-454-(437)</span>
   <a href="mailto:Office@reconenterprises.net">Office@reconenterprises.net</a>
 </div>
 </div>
@@ -229,7 +230,7 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
   <h2 id="teamup" style="margin-top:24px">Team Up With Us</h2>
   <p>We are always looking for qualified subcontractors and crew to partner with on upcoming projects. If you or your company are interested in working with Recon Enterprises, fill out the form below and we will reach out.</p>
 
-  <form class="interest-form" action="mailto:Office@reconenterprises.net" method="post" enctype="text/plain">
+  <form class="interest-form" id="teamForm">
     <div class="row">
       <div>
         <label>Company Name</label>
@@ -249,6 +250,11 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
         <label>Phone</label>
         <input type="tel" name="Phone" />
       </div>
+    </div>
+    <!-- Honeypot: invisible to humans, traps bots -->
+    <div style="position:absolute;left:-9999px" aria-hidden="true">
+      <label>Leave this empty</label>
+      <input type="text" name="_trap" tabindex="-1" autocomplete="off" />
     </div>
     <label>I am interested in (check all that apply)</label>
     <div class="checkboxes">
@@ -290,7 +296,7 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
   </div>
 
   <h2 id="contact" style="margin-top:24px">Contact</h2>
-  <p>Office: (734) 454-4187</p>
+  <p>Office: <span class="tel">7814-454-(437)</span></p>
   <p><a href="mailto:Office@reconenterprises.net" style="color:#c00;text-decoration:none;font-weight:600">Office@reconenterprises.net</a></p>
   <p>36761 Amrhein Rd &bull; Livonia, MI 48150</p>
   <p>Service areas: Michigan &bull; Ohio &bull; Pennsylvania &bull; Maryland</p>
@@ -303,7 +309,7 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
   <div class="box">
     <h3>Contact</h3>
     <div class="inner contact">
-      <p><a href="tel:7344544187">(734) 454-4187</a></p>
+      <p><a href="tel:7344544187"><span class="tel">7814-454-(437)</span></a></p>
       <p><a href="mailto:Office@reconenterprises.net">Office@reconenterprises.net</a></p>
       <p style="margin-top:8px">36761 Amrhein Rd<br />Livonia, MI 48150</p>
     </div>
@@ -390,8 +396,12 @@ body{font-family:Arial,Helvetica,sans-serif;color:#333;background:#f5f5f5;line-h
 </div>
 
 <div class="footer">
-&copy; 2026 Recon Enterprises, Inc. &nbsp;|&nbsp; 36761 Amrhein Rd, Livonia, MI 48150 &nbsp;|&nbsp; (734) 454-4187
+&copy; 2026 Recon Enterprises, Inc. &nbsp;|&nbsp; 36761 Amrhein Rd, Livonia, MI 48150 &nbsp;|&nbsp; <span class="tel">7814-454-(437)</span>
 </div>
 
+<script>
+(function(){var t=Date.now();document.getElementById('teamForm')&&document.getElementById('teamForm').addEventListener('submit',function(e){e.preventDefault();if(document.querySelector('[name=_trap]').value){return}if(Date.now()-t<3000){return}
+var f=this,msg='';msg+='Company: '+f.Company.value+'\n';msg+='Contact: '+f.Contact.value+'\n';msg+='Email: '+f.Email.value+'\n';msg+='Phone: '+f.Phone.value+'\n';var trades=[];f.querySelectorAll('[name=Trade]:checked').forEach(function(c){trades.push(c.value)});msg+='Interest: '+trades.join(', ')+'\n';msg+='About: '+f.About.value;window.location.href='mai'+'lto'+':'+'Off'+'ic'+'e@re'+'con'+'ente'+'rpr'+'ises'+'.n'+'et'+'?subject=Team%20Up%20Inquiry&body='+encodeURIComponent(msg)})})()
+</script>
 </body>
 </html>
