@@ -8,30 +8,24 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Georgia,'Times New Roman',serif;color:#222;background:#fff;line-height:1.7}
-
 .container{max-width:1100px;margin:0 auto;padding:0 32px}
 
-/* ===== HEADER ===== */
 header{background:#1a1a2e;color:#fff;padding:100px 0 60px}
 header h1{font-size:2.2rem;font-weight:400;letter-spacing:1px;margin-bottom:8px;text-transform:uppercase}
 header h1 strong{font-weight:700}
 header p{color:rgba(255,255,255,.65);font-size:1.05rem;max-width:700px;line-height:1.6}
 header .tag{display:inline-block;border:1px solid rgba(255,255,255,.2);padding:4px 14px;border-radius:3px;font-size:.75rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.6);margin-bottom:20px}
 
-/* ===== NAV ===== */
 nav{background:#1a1a2e;border-bottom:1px solid rgba(255,255,255,.08)}
 nav .container{display:flex;gap:32px;padding:14px 32px}
 nav a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;transition:color .2s}
 nav a:hover{color:#fff}
 
-/* ===== SECTIONS ===== */
 section{padding:70px 0}
 .section-title{font-size:1.1rem;text-transform:uppercase;letter-spacing:2px;color:#9a3b2e;margin-bottom:24px;font-weight:600;font-family:'Inter',-apple-system,sans-serif}
 .section-title:after{content:"";display:block;width:30px;height:2px;background:#9a3b2e;margin-top:8px}
 
 .about p{color:#444;margin-bottom:16px;font-size:1.05rem}
-.about p:last-child{margin-bottom:0}
-
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 @media(max-width:768px){.two-col{grid-template-columns:1fr}}
 
@@ -40,6 +34,7 @@ section{padding:70px 0}
 .cred-item{background:#fff;padding:28px;border:1px solid #e8e8e5}
 .cred-item h3{font-size:1.1rem;margin-bottom:8px;font-family:'Inter',-apple-system,sans-serif}
 .cred-item p{font-size:.9rem;color:#666;line-height:1.5}
+@media(max-width:768px){.cred-list{grid-template-columns:1fr}}
 
 .values{background:#fff}
 .value-item{margin-bottom:20px}
@@ -52,10 +47,8 @@ section{padding:70px 0}
 .project-card h3{font-size:1rem;margin-bottom:4px;font-family:'Inter',-apple-system,sans-serif}
 .project-card .client{font-size:.8rem;color:#9a3b2e;font-weight:600;margin-bottom:8px}
 .project-card .desc{font-size:.85rem;color:#666;line-height:1.5}
-.project-card .value{font-size:.8rem;color:#888;margin-top:8px}
 @media(max-width:768px){.project-grid{grid-template-columns:1fr}}
 
-/* ===== CONTACT ===== */
 .contact{background:#1a1a2e;color:#fff}
 .contact .section-title{color:#e8755a}
 .contact .section-title:after{background:#e8755a}
@@ -74,7 +67,7 @@ footer{background:#111;color:rgba(255,255,255,.4);text-align:center;padding:24px
 <div class="container">
   <a href="#about">About</a>
   <a href="#expertise">Expertise</a>
-  <a href="#values">Our Approach</a>
+  <a href="#approach">Approach</a>
   <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 </div>
@@ -82,143 +75,132 @@ footer{background:#111;color:rgba(255,255,255,.4);text-align:center;padding:24px
 
 <header>
 <div class="container">
-  <div class="tag">General Contractor — Multi-Family Renovation</div>
+  <div class="tag">Multi-Family Renovation</div>
   <h1>RECON <strong>ENTERPRISES</strong></h1>
-  <p>Michigan-based general contractor specializing in the rehabilitation and renovation of multi-family housing. Partnering with general contractors, developers, and property owners to deliver large-scale projects on time and on budget.</p>
+  <p>Michigan general contractor. Multi-family rehabilitation and renovation. We work with GCs, developers, and property owners to get large-scale projects done.</p>
 </div>
 </header>
 
-<!-- ===== ABOUT ===== -->
 <section class="about" id="about">
 <div class="container">
-  <div class="section-title">About Us</div>
+  <div class="section-title">About</div>
   <div class="two-col">
     <div>
-      <p>Recon Enterprises, Inc. was established as a women-owned construction company serving the affordable housing industry. Under the leadership of Managing Director Michael Reoch, we have grown from a single project in 2020 to managing multiple simultaneous $4M+ renovation programs across Michigan, Ohio, Pennsylvania, and Maryland.</p>
-      <p>We partner exclusively with established general contractors and developers who share our commitment to quality — including Rose Community Builders and Ginosko Construction — delivering full-scope rehabilitation, unit turns, and building upgrades that stand the test of time.</p>
+      <p>Recon Enterprises works exclusively with established general contractors and developers on multi-family renovation work — full-building rehabs, unit turns, exterior and interior upgrades. We handle projects across Michigan, Ohio, Pennsylvania, and Maryland.</p>
+      <p>Our team has been doing this for a while. We started small, grew into larger work, and now manage multiple renovation projects at once without missing a beat. It&rsquo;s not complicated — we show up, do the job, and keep the client updated the whole way.</p>
     </div>
     <div>
-      <p>Our model is built on relationships, not volume. We are selective about the work we take on because we believe that the best projects come from trust, clear communication, and a shared commitment to doing the job right.</p>
-      <p>Recon Enterprises manages every phase of construction — from pre-construction planning through closeout — with a dedicated team of experienced project managers, superintendents, and trade partners.</p>
+      <p>We&rsquo;re selective about the work we take. Has nothing to do with being picky — we just believe a job done right beats ten jobs done half right. That&rsquo;s why the same GCs keep calling us back.</p>
+      <p>Every project gets the same treatment. Pre-construction planning, daily coordination, clean closeout. One point of contact, clear answers, no runaround.</p>
     </div>
   </div>
 </div>
 </section>
 
-<!-- ===== EXPERTISE ===== -->
 <section class="credentials" id="expertise">
 <div class="container">
-  <div class="section-title">Expertise</div>
-  <p style="color:#555;margin-bottom:8px;max-width:700px">Decades of combined experience in multi-family rehabilitation, with a thorough understanding of affordable housing requirements, compliance, and delivery.</p>
+  <div class="section-title">What We Do</div>
+  <p style="color:#555;margin-bottom:24px;max-width:700px">Full-scope renovation capabilities. We self-perform most of the work and manage the rest through trades we already know and trust.</p>
   <div class="cred-list">
     <div class="cred-item">
-      <h3>Full-Scope Renovation</h3>
-      <p>Self-perform capabilities across roofing, siding, windows, doors, flooring, painting, kitchen and bath renovation, concrete, and pavement. We manage quality from start to finish.</p>
+      <h3>Exterior Work</h3>
+      <p>Roofing, siding, windows, doors, concrete, pavement. We handle the building envelope from top to bottom.</p>
+    </div>
+    <div class="cred-item">
+      <h3>Interior Finishes</h3>
+      <p>Kitchens, bathrooms, flooring, paint, trim. Unit turns and common area upgrades. New or refresh.</p>
+    </div>
+    <div class="cred-item">
+      <h3>Full-Building Rehab</h3>
+      <p>Structural repairs, MEP upgrades, elevator modernization, amenity spaces. We coordinate the whole scope so you don&rsquo;t have to.</p>
     </div>
     <div class="cred-item">
       <h3>Project Size</h3>
-      <p>Managing multiple concurrent projects valued at $2M–$4M each, with combined annual revenue exceeding $9M. Proven capacity to scale with your portfolio.</p>
+      <p>Renovation projects from a couple hundred thousand into the millions. Multiple active projects running concurrently.</p>
     </div>
     <div class="cred-item">
-      <h3>Multi-State Delivery</h3>
-      <p>Active projects in Michigan, Ohio, Pennsylvania, and Maryland. We coordinate logistics, crews, and materials across state lines without losing schedule or quality.</p>
+      <h3>Multi-State Coverage</h3>
+      <p>Michigan, Ohio, Pennsylvania, Maryland. We mobilize crews and materials wherever the work takes us.</p>
     </div>
     <div class="cred-item">
-      <h3>Trade Partner Network</h3>
-      <p>A vetted network of 25+ qualified subcontractors and suppliers. We handle sourcing, coordination, COI tracking, and scheduling so you have one point of contact.</p>
-    </div>
-    <div class="cred-item">
-      <h3>Procore Integrated</h3>
-      <p>Full Procore project management for document control, RFIs, submittals, commitments, and change order tracking. Seamless collaboration with your team.</p>
-    </div>
-    <div class="cred-item">
-      <h3>Compliance Ready</h3>
-      <p>Experience with affordable housing programs, Davis-Bacon, Section 3, MBE/WBE participation, and state-specific requirements across our service areas.</p>
+      <h3>Procore</h3>
+      <p>RFIs, submittals, commitments, drawings, photos — all in Procore. We work in whatever system your team uses.</p>
     </div>
   </div>
 </div>
 </section>
 
-<!-- ===== VALUES ===== -->
-<section class="values" id="values">
+<section class="values" id="approach">
 <div class="container">
-  <div class="section-title">Our Approach</div>
-  <p style="color:#555;margin-bottom:24px;max-width:700px">We believe that how you build matters as much as what you build. Our approach is rooted in respect — for the project, the residents, and the relationship.</p>
+  <div class="section-title">How We Work</div>
+  <p style="color:#555;margin-bottom:24px;max-width:700px">Straightforward. No corporate speak. Just a crew that knows what they&rsquo;re doing and communicates when something comes up.</p>
   <div class="two-col">
     <div>
       <div class="value-item">
-        <h3>Resident-First Construction</h3>
-        <p>We minimize disruption to residents through phased scheduling, clear communication, and coordinated trade sequencing. Our team understands that these are people&rsquo;s homes, not just job sites.</p>
+        <h3>Residents come first</h3>
+        <p>We schedule around people&rsquo;s lives. Phased work, clear notices, minimal disruption. These are homes, not just job sites.</p>
       </div>
       <div class="value-item">
-        <h3>Reliability Over Lowest Bid</h3>
-        <p>We do not chase volume. We take on work we can execute well, communicate honestly about timelines and budgets, and show up every day until the job is done.</p>
+        <h3>Honest timelines</h3>
+        <p>We tell you what we know and what we don&rsquo;t. If something changes, you hear about it before it becomes a problem.</p>
       </div>
     </div>
     <div>
       <div class="value-item">
-        <h3>Quality Materials & Workmanship</h3>
-        <p>We use products and materials that enhance resident wellbeing and building performance. From energy-efficient windows to durable flooring and finishes, we build to last.</p>
+        <h3>One point of contact</h3>
+        <p>Project manager, superintendent, whoever&rsquo;s on site — you get straight answers without fishing through emails.</p>
       </div>
       <div class="value-item">
-        <h3>End-to-End Accountability</h3>
-        <p>From pre-construction budgeting and scheduling through final punch list and closeout, one team owns the outcome. No handoffs, no dropped balls, no excuses.</p>
+        <h3>Built on repeat work</h3>
+        <p>We don&rsquo;t chase every bid. We build relationships with GCs who value reliability over the lowest number, and that&rsquo;s served us well.</p>
       </div>
     </div>
   </div>
 </div>
 </section>
 
-<!-- ===== PROJECTS ===== -->
 <section class="projects" id="projects">
 <div class="container">
-  <div class="section-title">Featured Projects</div>
+  <div class="section-title">Projects</div>
   <div class="project-grid">
     <div class="project-card">
       <h3>Plymouth Square</h3>
       <div class="client">Rose Community Builders</div>
-      <div class="desc">High-rise and townhome renovation in Detroit, Michigan. Full-building interior and exterior rehabilitation including window and door replacement, siding, roofing, and unit renovations.</div>
-      <div class="value">Contract: $3.6M</div>
+      <div class="desc">Detroit high-rise and townhome renovation. Full exterior and interior rehab including windows, siding, roofing, and unit upgrades.</div>
     </div>
     <div class="project-card">
       <h3>North Port Village</h3>
       <div class="client">Rose Community Builders</div>
-      <div class="desc">Multi-building renovation in Port Huron, Michigan. Complete unit turns, exterior systems, and site improvements.</div>
-      <div class="value">Contract: $1.9M — Completed</div>
+      <div class="desc">Port Huron. Multi-building renovation, unit turns, exterior systems. Completed.</div>
     </div>
     <div class="project-card">
       <h3>Greenhouse Apartments</h3>
       <div class="client">Ginosko Construction</div>
-      <div class="desc">Senior high-rise renovation in Detroit, Michigan. Kitchen and bath renovations, flooring, HVAC, windows, roofing, elevator modernization, and amenity upgrades across 208 units.</div>
-      <div class="value">Contract: $2.1M</div>
+      <div class="desc">Detroit senior high-rise. Kitchen and bath renovations, HVAC, windows, roofing, elevator work, amenity spaces. 208 units.</div>
     </div>
     <div class="project-card">
       <h3>Coventry Woods</h3>
       <div class="client">Ginosko Construction</div>
-      <div class="desc">Senior mid-rise renovation in Walker, Michigan. Full interior and exterior upgrades including kitchen and bath renovations, energy efficiency improvements, and accessibility upgrades across 100 units.</div>
-      <div class="value">Contract: $1.3M</div>
+      <div class="desc">Walker, MI senior mid-rise. Interior and exterior upgrades, energy efficiency, accessibility. 100 units.</div>
     </div>
     <div class="project-card">
       <h3>Art Center Townhomes</h3>
       <div class="client">Ginosko Construction</div>
-      <div class="desc">Townhome renovation in Detroit, Michigan. Critical repairs, fire and safety improvements, parking lot upgrades, and capital improvements across 60 units.</div>
-      <div class="value">Completed</div>
+      <div class="desc">Detroit townhome renovation. Repairs, fire and safety upgrades, parking and site improvements. 60 units.</div>
     </div>
     <div class="project-card">
       <h3>Setter&rsquo;s Point</h3>
       <div class="client">Ginosko Construction</div>
-      <div class="desc">Active multi-family renovation project. Full-scope rehabilitation currently in progress.</div>
-      <div class="value">Active</div>
+      <div class="desc">Multi-family rehab currently in progress.</div>
     </div>
   </div>
 </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
 <section class="contact" id="contact">
 <div class="container">
   <div class="section-title">Contact</div>
-  <p style="color:rgba(255,255,255,.6);max-width:600px;">We are selective about the work we take on. If you have a multi-family renovation project that needs a reliable partner, we want to hear from you.</p>
+  <p style="color:rgba(255,255,255,.6);max-width:600px;">If you have a multi-family renovation that needs a solid crew, give us a call.</p>
   <div class="contact-details">
     <div class="contact-block">
       <h3>Michael Reoch</h3>
@@ -238,7 +220,7 @@ footer{background:#111;color:rgba(255,255,255,.4);text-align:center;padding:24px
 </div>
 </section>
 
-<footer>&copy; 2026 Recon Enterprises, Inc. All rights reserved.</footer>
+<footer>&copy; 2026 Recon Enterprises, Inc.</footer>
 
 </body>
 </html>
