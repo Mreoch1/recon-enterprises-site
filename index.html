@@ -6,250 +6,211 @@
 <title>Recon Enterprises — Multi-Family Renovation & Rehabilitation</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Georgia,serif;color:#333;background:#fff;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+body{font-family:Georgia,'Times New Roman',serif;color:#333;background:#fafafa;line-height:1.6}
 
-/* ===== LAYOUT ===== */
-.site-wrapper{display:grid;grid-template-columns:minmax(0,1fr);min-height:100vh}
-@media(min-width:960px){.site-wrapper{grid-template-columns:280px minmax(0,1fr)}}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 
-/* ===== SIDEBAR ===== */
-.sidebar{
-  background:#1a1a2e;color:rgba(255,255,255,.7);
-  padding:40px 28px;position:sticky;top:0;height:100vh;
-  display:flex;flex-direction:column;gap:32px;
-  font-size:.9rem;overflow-y:auto;
-}
-.sidebar .logo{color:#fff;font-size:1.3rem;font-weight:700;letter-spacing:-.5px;text-decoration:none;display:block}
-.sidebar .logo span{color:#c44536}
-.sidebar .tagline{font-size:.75rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1.5px;margin-top:-20px}
-.sidebar nav{display:flex;flex-direction:column;gap:8px}
-.sidebar nav a{color:rgba(255,255,255,.55);text-decoration:none;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:.85rem;transition:color .2s}
-.sidebar nav a:hover{color:#fff}
-.sidebar .contact-info{margin-top:auto;padding-top:20px;border-top:1px solid rgba(255,255,255,.08)}
-.sidebar .contact-info p{font-size:.8rem;margin-bottom:4px;color:rgba(255,255,255,.45)}
-.sidebar .contact-info a{color:#e8755a;text-decoration:none;font-size:.8rem;display:block;margin-bottom:2px}
-.sidebar .social{margin-top:12px;display:flex;gap:12px}
-.sidebar .social a{color:rgba(255,255,255,.3);text-decoration:none;font-size:.75rem;transition:color .2s}
-.sidebar .social a:hover{color:rgba(255,255,255,.7)}
+/* header */
+.header{background:#1a1a2e;color:#fff;padding:24px 0}
+.header .wrap{display:flex;justify-content:space-between;align-items:center}
+.header .logo{font-size:1.2rem;font-weight:700;letter-spacing:-.5px;color:#fff;text-decoration:none}
+.header .logo span{color:#c44536}
+.header nav{display:flex;gap:20px}
+.header nav a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;transition:color .15s}
+.header nav a:hover{color:#fff}
+@media(max-width:700px){.header .wrap{flex-direction:column;gap:12px}.header nav{gap:12px}.header nav a{font-size:.75rem}}
 
-/* ===== MAIN CONTENT ===== */
-.main{padding:0;max-width:1100px}
-.main section{padding:48px 0;margin:0 40px}
-.main section+section{border-top:1px solid #e8e8e5}
+/* hero strip */
+.hero{background:#f2f0ed;padding:64px 0 48px;border-bottom:1px solid #ddd}
+.hero h1{font-size:1.6rem;font-weight:700;margin-bottom:12px;color:#1a1a2e}
+.hero p{color:#555;font-size:1rem;max-width:650px}
 
-h1{font-size:1.6rem;font-weight:700;margin-bottom:8px;color:#1a1a2e}
-h2{font-size:1.1rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#9a3b2e;margin-bottom:20px;font-size:.85rem}
-h3{font-size:1rem;font-weight:600;margin-bottom:4px}
+/* main two-col */
+.page{display:grid;grid-template-columns:1fr 280px;gap:40px;padding:40px 0}
+@media(max-width:800px){.page{grid-template-columns:1fr}}
 
-/* ===== HERO ===== */
-.hero{padding:60px 0 40px!important;border-top:none!important}
-.hero h1{font-size:2rem;margin-bottom:12px}
-.hero p{color:#555;font-size:1rem;max-width:600px;margin-bottom:12px}
+/* content */
+.content h2{font-size:1rem;text-transform:uppercase;letter-spacing:2px;color:#9a3b2e;margin-bottom:20px;font-weight:600}
+.content h3{font-size:.95rem;font-weight:600;margin:16px 0 4px;color:#1a1a2e}
+.content p{color:#444;margin-bottom:12px;font-size:.95rem}
 
-/* ===== TWO COL ===== */
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-@media(max-width:768px){.two-col,.three-col{grid-template-columns:1fr}}
+/* photo grid */
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+.photo-grid img{border:1px solid #ddd;width:100%;aspect-ratio:4/3;object-fit:cover}
+@media(max-width:500px){.photo-grid{grid-template-columns:1fr}}
 
-p{color:#444;margin-bottom:12px;font-size:.95rem}
+/* project list */
+.project{margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid #eee}
+.project:last-child{border-bottom:none}
+.project h3{font-size:1rem;color:#1a1a2e}
+.project .meta{font-size:.8rem;color:#9a3b2e;font-weight:600;margin:2px 0 6px}
+.project p{font-size:.9rem;color:#555}
 
-/* ===== PROJECT CARDS ===== */
-.projects-section{background:#f7f7f5;padding:48px 40px!important;margin:0!important}
-.project-list{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.project-item{border:1px solid #ddd;padding:16px;background:#fff}
-.project-item h3{font-size:.95rem;color:#1a1a2e}
-.project-item .client{font-size:.8rem;color:#9a3b2e;font-weight:600;margin-bottom:6px}
-.project-item .desc{font-size:.85rem;color:#555;line-height:1.5}
-@media(max-width:768px){.project-list{grid-template-columns:1fr}}
+/* sidebar */
+.sidebar{padding:0}
+.sidebar .box{border:1px solid #ddd;padding:20px;margin-bottom:16px;background:#fff}
+.sidebar .box h3{font-size:.85rem;text-transform:uppercase;letter-spacing:1.5px;color:#9a3b2e;margin-bottom:12px}
+.sidebar .box ul{list-style:none}
+.sidebar .box li{border-bottom:1px solid #eee;padding:6px 0;font-size:.85rem;color:#555}
+.sidebar .box li:last-child{border-bottom:none}
+.sidebar .box a{color:#333;text-decoration:none}
+.sidebar .box a:hover{color:#9a3b2e}
+.sidebar .contact p{font-size:.85rem;color:#555;margin-bottom:4px}
+.sidebar .contact a{color:#9a3b2e;text-decoration:none;font-size:.85rem}
 
-/* ===== ACTIVE PROJECTS ===== */
-.active-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
-.active-card{border:1px solid #ddd;padding:16px;background:#fff;text-align:center}
-.active-card h3{font-size:.9rem}
-.active-card .loc{font-size:.8rem;color:#888}
-@media(max-width:768px){.active-list{grid-template-columns:1fr}}
-
-/* ===== FOOTER ===== */
-.main-foot{background:#f2f2f0;padding:24px 40px!important;margin:0!important;font-size:.8rem;color:#888}
-
-/* Mobile sidebar toggle */
-.sidebar-toggle{display:none;background:#1a1a2e;color:#fff;border:none;padding:12px 16px;width:100%;text-align:left;font-size:1rem;cursor:pointer}
-@media(max-width:959px){
-  .sidebar{position:relative;height:auto;padding:20px;display:none}
-  .sidebar.open{display:flex}
-  .sidebar-toggle{display:block}
-  .main section{padding:32px 0;margin:0 20px}
-  .projects-section{padding:32px 20px!important}
-}
+/* footer */
+.footer{background:#1a1a2e;color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:.8rem;margin-top:40px}
 </style>
 </head>
 <body>
 
-<button class="sidebar-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰ Recon Enterprises</button>
-
-<div class="site-wrapper">
-
-<div class="sidebar">
-  <div>
-    <a href="/" class="logo">RECON <span>ENTERPRISES</span></a>
-    <div class="tagline">Multi-Family Renovation</div>
-  </div>
+<div class="header">
+<div class="wrap">
+  <a href="/" class="logo">RECON <span>ENTERPRISES</span></a>
   <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
+    <a href="/">Home</a>
     <a href="#projects">Projects</a>
-    <a href="#active">Current Work</a>
     <a href="#contact">Contact</a>
   </nav>
-  <div class="contact-info">
-    <p>Michael Reoch</p>
-    <a href="tel:7344544187">(734) 454-4187</a>
-    <a href="mailto:mike@reconenterprises.net">mike@reconenterprises.net</a>
-    <p style="margin-top:8px">36761 Amrhein Rd<br>Livonia, MI 48150</p>
-  </div>
+</div>
 </div>
 
-<div class="main">
+<div class="hero">
+<div class="wrap">
+  <h1>Michigan general contractor. Multi-family renovation and rehabilitation.</h1>
+  <p>We work with GCs, developers, and property owners on large-scale renovation projects across the Midwest. Full-building rehabs, unit turns, exterior and interior upgrades.</p>
+</div>
+</div>
 
-<!-- ===== HERO ===== -->
-<section class="hero" id="about">
-  <h1>Michigan general contractor specializing in multi-family rehabilitation and renovation.</h1>
-  <p>We work with GCs, developers, and property owners on large-scale projects. Full-building rehabs, unit turns, exterior and interior upgrades. Michigan, Ohio, Pennsylvania, Maryland.</p>
-</section>
+<div class="wrap page">
 
-<!-- ===== ABOUT ===== -->
-<section>
+<div class="content">
+
   <h2>About</h2>
-  <div class="two-col">
-    <div>
-      <p>Recon Enterprises works exclusively with general contractors and developers on multi-family renovation work. We started small, grew into larger work, and now run multiple projects at once across several states.</p>
-      <p>We&rsquo;re selective about the work we take. Has nothing to do with being picky. A job done right beats ten done half right.</p>
-    </div>
-    <div>
-      <p>Same GCs keep calling us back. That&rsquo;s the measure that matters to us.</p>
-      <p>Every project gets pre-construction planning, daily coordination, and a clean closeout. One point of contact, clear answers, no runaround.</p>
-    </div>
-  </div>
-</section>
+  <p>Recon Enterprises partners with general contractors and developers on multi-family renovation work. We started small, moved into larger projects, and now manage multiple concurrent jobs across several states.</p>
+  <p>We are selective about the work we take. The same GCs keep calling us back, and that is the measure that matters.</p>
+  <p>Every project gets pre-construction planning, daily coordination, and a clean closeout. One point of contact, clear answers, no runaround.</p>
 
-<!-- ===== SERVICES ===== -->
-<section id="services">
+  <div class="photo-grid">
+    <img src="photos/plymouth-1.jpg" alt="Plymouth Square project exterior" />
+    <img src="photos/plymouth-2.jpg" alt="Plymouth Square project detail" />
+  </div>
+
   <h2>Services</h2>
-  <div class="three-col">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px">
     <div>
-      <h3>Exterior</h3>
-      <p>Roofing, siding, windows, doors, concrete, pavement. The whole building envelope.</p>
+      <p><strong>Exterior</strong><br>Roofing, siding, windows, doors, concrete, pavement. The full building envelope.</p>
     </div>
     <div>
-      <h3>Interior</h3>
-      <p>Kitchens, bathrooms, flooring, paint, trim. Unit turns and common areas.</p>
+      <p><strong>Interior</strong><br>Kitchens, bathrooms, flooring, paint, trim. Unit turns and common areas.</p>
     </div>
     <div>
-      <h3>Full Rehab</h3>
-      <p>Structural, MEP, elevator modernization, amenity spaces. We coordinate the whole scope.</p>
-    </div>
-  </div>
-  <div class="three-col" style="margin-top:16px">
-    <div>
-      <h3>Trade Management</h3>
-      <p>Vetted network of subcontractors. One point of contact for scheduling, COIs, and coordination.</p>
+      <p><strong>Full Rehab</strong><br>Structural, MEP, elevator modernization, amenity spaces. We coordinate the whole scope.</p>
     </div>
     <div>
-      <h3>Project Size</h3>
-      <p>From hundreds of thousands into the millions. Multiple projects running concurrently.</p>
-    </div>
-    <div>
-      <h3>Procore</h3>
-      <p>RFIs, submittals, commitments, drawings. We work in whatever system your team uses.</p>
+      <p><strong>Trade Management</strong><br>Vetted network of subcontractors. One point of contact for scheduling, COIs, and on-site coordination.</p>
     </div>
   </div>
-</section>
 
-<!-- ===== PROJECTS ===== -->
-<section id="projects" class="projects-section">
-  <h2>Past Projects</h2>
-  <div class="project-list">
-    <div class="project-item">
-      <h3>Plymouth Square</h3>
-      <div class="client">Rose Community Builders</div>
-      <div class="desc">Detroit. High-rise and townhome renovation. Full exterior and interior rehab, window and door replacement, siding, roofing, unit renovations.</div>
-    </div>
-    <div class="project-item">
-      <h3>North Port Village</h3>
-      <div class="client">Rose Community Builders</div>
-      <div class="desc">Port Huron, MI. Multi-building renovation with unit turns, exterior systems, and site improvements. Completed.</div>
-    </div>
-    <div class="project-item">
-      <h3>Greenhouse Apartments</h3>
-      <div class="client">Ginosko Construction</div>
-      <div class="desc">Detroit. 208-unit senior high-rise. Kitchen and bath renovations, HVAC, windows, roofing, elevator modernization, amenity upgrades.</div>
-    </div>
-    <div class="project-item">
-      <h3>Coventry Woods</h3>
-      <div class="client">Ginosko Construction</div>
-      <div class="desc">Walker, MI. 100-unit senior mid-rise. Full interior and exterior upgrades, energy efficiency, accessibility improvements.</div>
-    </div>
-    <div class="project-item">
-      <h3>Art Center Townhomes</h3>
-      <div class="client">Ginosko Construction</div>
-      <div class="desc">Detroit. 60-unit townhome renovation. Critical repairs, fire and safety upgrades, parking and site improvements.</div>
-    </div>
-    <div class="project-item">
-      <h3>Birch Park</h3>
-      <div class="client">Ginosko Construction</div>
-      <div class="desc">Saginaw, MI. Townhome and apartment low-rise renovation. Kitchen and bath renovations, HVAC, roofing, windows.</div>
-    </div>
+  <div class="photo-grid">
+    <img src="photos/work-1.jpg" alt="Interior renovation work" />
+    <img src="photos/interior-1.jpg" alt="Building interior work" />
   </div>
-</section>
 
-<!-- ===== ACTIVE WORK ===== -->
-<section id="active">
-  <h2>Current Work</h2>
-  <p style="margin-bottom:8px">Active projects and work in progress.</p>
-  <div class="active-list">
-    <div class="active-card">
-      <h3>Cambridge Towers</h3>
-      <div class="loc">Rose Community Builders</div>
-    </div>
-    <div class="active-card">
-      <h3>Plymouth Square</h3>
-      <div class="loc">Rose Community Builders</div>
-    </div>
-    <div class="active-card">
-      <h3>Setter&rsquo;s Point</h3>
-      <div class="loc">Ginosko Construction</div>
-    </div>
+  <h2 id="projects">Projects</h2>
+
+  <div class="project">
+    <h3>Plymouth Square</h3>
+    <div class="meta">Rose Community Builders &mdash; Detroit, MI</div>
+    <p>High-rise and townhome renovation. Full exterior and interior rehabilitation including window and door replacement, siding, roofing, and unit upgrades.</p>
   </div>
-</section>
 
-<!-- ===== CONTACT ===== -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>If you have a multi-family renovation that needs a solid crew, give us a call.</p>
-  <div class="two-col" style="margin-top:16px">
-    <div>
-      <p><strong>Michael Reoch</strong><br>Managing Director</p>
-      <p><a href="tel:7344544187" style="color:#9a3b2e">(734) 454-4187</a><br>
-      <a href="mailto:mike@reconenterprises.net" style="color:#9a3b2e">mike@reconenterprises.net</a></p>
-      <p>36761 Amrhein Rd<br>Livonia, MI 48150</p>
-    </div>
-    <div>
-      <p><strong>Service Areas</strong><br>
-      Michigan &bull; Ohio<br>
-      Pennsylvania &bull; Maryland</p>
-      <p style="margin-top:12px"><strong>Hours</strong><br>
-      Mon&ndash;Fri 9am&ndash;5pm<br>
-      Sat/Sun by appointment</p>
-    </div>
+  <div class="project">
+    <h3>North Port Village</h3>
+    <div class="meta">Rose Community Builders &mdash; Port Huron, MI</div>
+    <p>Multi-building renovation project. Unit turns, exterior systems, site improvements. Completed.</p>
   </div>
-</section>
 
-<div class="main-foot">
-  &copy; 2026 Recon Enterprises, Inc.
+  <div class="project">
+    <h3>Greenhouse Apartments</h3>
+    <div class="meta">Ginosko Construction &mdash; Detroit, MI</div>
+    <p>208-unit senior high-rise renovation. Kitchen and bath renovations, HVAC, windows, roofing, elevator modernization, amenity upgrades.</p>
+  </div>
+
+  <div class="project">
+    <h3>Coventry Woods</h3>
+    <div class="meta">Ginosko Construction &mdash; Walker, MI</div>
+    <p>100-unit senior mid-rise. Full interior and exterior upgrades, energy efficiency improvements, accessibility upgrades.</p>
+  </div>
+
+  <div class="project">
+    <h3>Art Center Townhomes</h3>
+    <div class="meta">Ginosko Construction &mdash; Detroit, MI</div>
+    <p>60-unit townhome renovation. Critical repairs, fire and safety upgrades, parking lot and site improvements.</p>
+  </div>
+
+  <div class="project">
+    <h3>Birch Park</h3>
+    <div class="meta">Ginosko Construction &mdash; Saginaw, MI</div>
+    <p>Townhome and apartment low-rise renovation. Kitchen and bath renovations, HVAC, roofing, windows.</p>
+  </div>
+
+  <h2 style="margin-top:32px">Current Work</h2>
+  <p>Cambridge Towers (Rose Community Builders), Plymouth Square (Rose Community Builders), Setter&rsquo;s Point (Ginosko Construction)</p>
+
+  <h2 style="margin-top:32px" id="contact">Contact</h2>
+  <p><strong>Michael Reoch</strong><br>Managing Director</p>
+  <p><a href="tel:7344544187" style="color:#9a3b2e">(734) 454-4187</a><br>
+  <a href="mailto:mike@reconenterprises.net" style="color:#9a3b2e">mike@reconenterprises.net</a></p>
+  <p>36761 Amrhein Rd &bull; Livonia, MI 48150</p>
+  <p>Service areas: Michigan &bull; Ohio &bull; Pennsylvania &bull; Maryland</p>
+
 </div>
 
-</div><!-- /main -->
-</div><!-- /site-wrapper -->
+<div class="sidebar">
+
+  <div class="box">
+    <h3>Contact</h3>
+    <div class="contact">
+      <p>Michael Reoch</p>
+      <a href="tel:7344544187">(734) 454-4187</a><br>
+      <a href="mailto:mike@reconenterprises.net">mike@reconenterprises.net</a>
+      <p style="margin-top:8px">36761 Amrhein Rd<br>Livonia, MI 48150</p>
+    </div>
+  </div>
+
+  <div class="box">
+    <h3>Services</h3>
+    <ul>
+      <li>Roofing & Siding</li>
+      <li>Windows & Doors</li>
+      <li>Kitchen & Bath</li>
+      <li>Flooring & Paint</li>
+      <li>Concrete & Pavement</li>
+      <li>Structural Rehab</li>
+      <li>MEP Upgrades</li>
+      <li>Trade Management</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h3>Service Areas</h3>
+    <ul>
+      <li>Michigan</li>
+      <li>Ohio</li>
+      <li>Pennsylvania</li>
+      <li>Maryland</li>
+    </ul>
+  </div>
+
+</div>
+
+</div>
+
+<div class="footer">
+&copy; 2026 Recon Enterprises, Inc. &bull; 36761 Amrhein Rd, Livonia, MI 48150 &bull; (734) 454-4187
+</div>
+
 </body>
 </html>
