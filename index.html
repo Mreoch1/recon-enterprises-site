@@ -3,233 +3,242 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Recon Enterprises — Multi-Family Renovation Partner</title>
+<title>Recon Enterprises — Multi-Family Renovation & Rehabilitation</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a2e;background:#fafafa;line-height:1.6;-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4{font-weight:700;line-height:1.2}
-h1{font-size:clamp(2.2rem,5vw,3.8rem)}
-h2{font-size:clamp(1.6rem,3vw,2.4rem)}
-h3{font-size:1.3rem}
-.container{max-width:1200px;margin:0 auto;padding:0 24px}
+body{font-family:Georgia,'Times New Roman',serif;color:#222;background:#fff;line-height:1.7}
 
-nav{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #eee;z-index:100;height:72px;display:flex;align-items:center}
-nav .container{display:flex;justify-content:space-between;align-items:center;width:100%}
-.logo{font-weight:800;font-size:1.4rem;color:#1a1a2e;letter-spacing:-0.5px}
-.logo span{color:#c44536}
-.nav-links{display:flex;gap:32px;align-items:center}
-.nav-links a{text-decoration:none;color:#555;font-weight:500;font-size:0.95rem;transition:color .2s}
-.nav-links a:hover{color:#c44536}
-.nav-cta{background:#1a1a2e;color:#fff!important;padding:10px 24px;border-radius:6px;transition:background .2s}
-.nav-cta:hover{background:#c44536!important;color:#fff!important}
-@media(max-width:768px){.nav-links{display:none}}
+.container{max-width:1100px;margin:0 auto;padding:0 32px}
 
-.hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:120px 0 80px}
-.hero .container{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.hero-badge{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:6px 16px;border-radius:100px;font-size:.85rem;font-weight:500;margin-bottom:20px;color:rgba(255,255,255,.8)}
-.hero h1{margin-bottom:16px}
-.hero h1 em{font-style:normal;color:#e8755a}
-.hero p{font-size:1.15rem;color:rgba(255,255,255,.75);margin-bottom:32px;max-width:520px}
-.hero-buttons{display:flex;gap:16px;flex-wrap:wrap}
-.btn-primary{display:inline-block;background:#c44536;color:#fff;padding:14px 32px;border-radius:6px;text-decoration:none;font-weight:600;font-size:1rem;transition:background .2s,transform .1s}
-.btn-primary:hover{background:#a8372a;transform:translateY(-1px)}
-.btn-secondary{display:inline-block;background:transparent;color:#fff;padding:14px 32px;border-radius:6px;text-decoration:none;font-weight:500;font-size:1rem;border:1px solid rgba(255,255,255,.3);transition:border-color .2s,background .2s}
-.btn-secondary:hover{border-color:#fff;background:rgba(255,255,255,.05)}
-.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:32px}
-.hero-stat h3{font-size:2rem;color:#e8755a;margin-bottom:2px}
-.hero-stat p{font-size:.85rem;color:rgba(255,255,255,.6);margin:0}
-@media(max-width:768px){.hero .container{grid-template-columns:1fr}}
+/* ===== HEADER ===== */
+header{background:#1a1a2e;color:#fff;padding:100px 0 60px}
+header h1{font-size:2.2rem;font-weight:400;letter-spacing:1px;margin-bottom:8px;text-transform:uppercase}
+header h1 strong{font-weight:700}
+header p{color:rgba(255,255,255,.65);font-size:1.05rem;max-width:700px;line-height:1.6}
+header .tag{display:inline-block;border:1px solid rgba(255,255,255,.2);padding:4px 14px;border-radius:3px;font-size:.75rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.6);margin-bottom:20px}
 
-section{padding:96px 0}
-.section-label{display:inline-block;color:#c44536;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
-.section-title{margin-bottom:16px}
-.section-subtitle{color:#666;font-size:1.1rem;max-width:600px;margin-bottom:48px}
+/* ===== NAV ===== */
+nav{background:#1a1a2e;border-bottom:1px solid rgba(255,255,255,.08)}
+nav .container{display:flex;gap:32px;padding:14px 32px}
+nav a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;transition:color .2s}
+nav a:hover{color:#fff}
 
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about-content p{color:#555;margin-bottom:16px}
-.about-highlights{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.about-highlight{background:#fff;border:1px solid #eee;border-radius:8px;padding:20px}
-.about-highlight h4{font-size:1rem;margin-bottom:4px}
-.about-highlight p{font-size:.85rem;color:#777;margin:0}
-@media(max-width:768px){.about-grid{grid-template-columns:1fr}}
+/* ===== SECTIONS ===== */
+section{padding:70px 0}
+.section-title{font-size:1.1rem;text-transform:uppercase;letter-spacing:2px;color:#9a3b2e;margin-bottom:24px;font-weight:600;font-family:'Inter',-apple-system,sans-serif}
+.section-title:after{content:"";display:block;width:30px;height:2px;background:#9a3b2e;margin-top:8px}
 
-.services-bg{background:#fff}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.service-card{border:1px solid #eee;border-radius:12px;padding:32px;transition:box-shadow .3s}
-.service-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.06)}
-.service-icon{width:48px;height:48px;border-radius:10px;background:#f0f0f0;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:16px}
-.service-card h3{font-size:1.1rem;margin-bottom:8px}
-.service-card p{font-size:.9rem;color:#666}
-@media(max-width:768px){.services-grid{grid-template-columns:1fr}}
+.about p{color:#444;margin-bottom:16px;font-size:1.05rem}
+.about p:last-child{margin-bottom:0}
 
-.clients{background:#f4f4f6}
-.client-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.client-card{background:#fff;border-radius:10px;padding:24px;border:1px solid #eee}
-.client-card h4{font-size:1rem;margin-bottom:4px}
-.client-card p{font-size:.85rem;color:#888;margin-bottom:12px}
-.client-project{font-size:.8rem;color:#c44536;font-weight:500}
-@media(max-width:768px){.client-grid{grid-template-columns:1fr}}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:768px){.two-col{grid-template-columns:1fr}}
 
+.credentials{background:#f7f7f5;border-top:1px solid #e8e8e5;border-bottom:1px solid #e8e8e5}
+.cred-list{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+.cred-item{background:#fff;padding:28px;border:1px solid #e8e8e5}
+.cred-item h3{font-size:1.1rem;margin-bottom:8px;font-family:'Inter',-apple-system,sans-serif}
+.cred-item p{font-size:.9rem;color:#666;line-height:1.5}
+
+.values{background:#fff}
+.value-item{margin-bottom:20px}
+.value-item h3{font-size:1rem;font-family:'Inter',-apple-system,sans-serif;color:#9a3b2e;margin-bottom:4px}
+.value-item p{font-size:.95rem;color:#555}
+
+.projects{background:#f7f7f5;border-top:1px solid #e8e8e5;border-bottom:1px solid #e8e8e5}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+.project-card{background:#fff;border:1px solid #e8e8e5;padding:24px}
+.project-card h3{font-size:1rem;margin-bottom:4px;font-family:'Inter',-apple-system,sans-serif}
+.project-card .client{font-size:.8rem;color:#9a3b2e;font-weight:600;margin-bottom:8px}
+.project-card .desc{font-size:.85rem;color:#666;line-height:1.5}
+.project-card .value{font-size:.8rem;color:#888;margin-top:8px}
+@media(max-width:768px){.project-grid{grid-template-columns:1fr}}
+
+/* ===== CONTACT ===== */
 .contact{background:#1a1a2e;color:#fff}
-.contact .section-subtitle{color:rgba(255,255,255,.6)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
-.contact-info h3{margin-bottom:16px}
-.contact-info p{color:rgba(255,255,255,.7);margin-bottom:8px}
-.contact-info a{color:#e8755a;text-decoration:none}
-.contact-info a:hover{text-decoration:underline}
-.contact-detail{margin-bottom:24px}
-.contact-detail strong{color:#fff;display:block;margin-bottom:2px}
-@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+.contact .section-title{color:#e8755a}
+.contact .section-title:after{background:#e8755a}
+.contact-details{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px}
+.contact-block h3{font-size:.85rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.5);margin-bottom:6px;font-family:'Inter',-apple-system,sans-serif}
+.contact-block p{color:rgba(255,255,255,.8);margin-bottom:4px}
+.contact-block a{color:#e8755a;text-decoration:none}
+.contact-block a:hover{text-decoration:underline}
 
-footer{background:#111;color:rgba(255,255,255,.5);text-align:center;padding:32px 0;font-size:.85rem}
+footer{background:#111;color:rgba(255,255,255,.4);text-align:center;padding:24px;font-size:.8rem}
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="container">
-    <div class="logo">RECON <span>ENTERPRISES</span></div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#clients">Projects</a>
-      <a href="#contact" class="nav-cta">Get in Touch</a>
-    </div>
-  </div>
+<div class="container">
+  <a href="#about">About</a>
+  <a href="#expertise">Expertise</a>
+  <a href="#values">Our Approach</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</div>
 </nav>
 
-<section class="hero" id="home">
-  <div class="container">
+<header>
+<div class="container">
+  <div class="tag">General Contractor — Multi-Family Renovation</div>
+  <h1>RECON <strong>ENTERPRISES</strong></h1>
+  <p>Michigan-based general contractor specializing in the rehabilitation and renovation of multi-family housing. Partnering with general contractors, developers, and property owners to deliver large-scale projects on time and on budget.</p>
+</div>
+</header>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+<div class="container">
+  <div class="section-title">About Us</div>
+  <div class="two-col">
     <div>
-      <div class="hero-badge">General Contractor &mdash; Multi-Family Renovation</div>
-      <h1>Your <em>Renovation Partner</em> for Large-Scale Multi-Family Projects</h1>
-      <p>We partner with general contractors and property owners to deliver $4M+ renovation programs across the Midwest &mdash; on time, on budget, and built on relationships that last.</p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn-primary">Start a Conversation</a>
-        <a href="#clients" class="btn-secondary">See Our Projects</a>
-      </div>
+      <p>Recon Enterprises, Inc. was established as a women-owned construction company serving the affordable housing industry. Under the leadership of Managing Director Michael Reoch, we have grown from a single project in 2020 to managing multiple simultaneous $4M+ renovation programs across Michigan, Ohio, Pennsylvania, and Maryland.</p>
+      <p>We partner exclusively with established general contractors and developers who share our commitment to quality — including Rose Community Builders and Ginosko Construction — delivering full-scope rehabilitation, unit turns, and building upgrades that stand the test of time.</p>
     </div>
-    <div class="hero-stats">
-      <div class="hero-stat"><h3>$9M+</h3><p>Annual Revenue</p></div>
-      <div class="hero-stat"><h3>3+</h3><p>Active Large Projects</p></div>
-      <div class="hero-stat"><h3>4</h3><p>States Served</p></div>
-      <div class="hero-stat"><h3>25+</h3><p>Trade Partners</p></div>
+    <div>
+      <p>Our model is built on relationships, not volume. We are selective about the work we take on because we believe that the best projects come from trust, clear communication, and a shared commitment to doing the job right.</p>
+      <p>Recon Enterprises manages every phase of construction — from pre-construction planning through closeout — with a dedicated team of experienced project managers, superintendents, and trade partners.</p>
     </div>
   </div>
+</div>
 </section>
 
-<section id="about">
-  <div class="container">
-    <span class="section-label">About</span>
-    <div class="about-grid">
-      <div class="about-content">
-        <h2 class="section-title">Built on Relationships, Not Bids</h2>
-        <p>Recon Enterprises is a Michigan-based general contractor specializing in large-scale multi-family renovation and rehabilitation. We manage projects from pre-construction through closeout &mdash; partnering with GCs, developers, and property owners who value reliability over the lowest bid.</p>
-        <p>Since 2020, we&rsquo;ve grown from one renovation project per year to managing three simultaneous $4M+ programs with Rose Community Builders and Ginosko Construction. Our model is simple: show up, execute, get paid, repeat.</p>
-      </div>
-      <div class="about-highlights">
-        <div class="about-highlight"><h4>Self-Perform Core</h4><p>Roofing, siding, windows, flooring, paint, kitchens, bathrooms, concrete</p></div>
-        <div class="about-highlight"><h4>Multi-State Reach</h4><p>Michigan, Ohio, Pennsylvania, Maryland</p></div>
-        <div class="about-highlight"><h4>Subcontractor Management</h4><p>25+ trade partners with full COI tracking and oversight</p></div>
-        <div class="about-highlight"><h4>Full-Scope Delivery</h4><p>Pre-construction through closeout, unit turns to full-building rehab</p></div>
-      </div>
+<!-- ===== EXPERTISE ===== -->
+<section class="credentials" id="expertise">
+<div class="container">
+  <div class="section-title">Expertise</div>
+  <p style="color:#555;margin-bottom:8px;max-width:700px">Decades of combined experience in multi-family rehabilitation, with a thorough understanding of affordable housing requirements, compliance, and delivery.</p>
+  <div class="cred-list">
+    <div class="cred-item">
+      <h3>Full-Scope Renovation</h3>
+      <p>Self-perform capabilities across roofing, siding, windows, doors, flooring, painting, kitchen and bath renovation, concrete, and pavement. We manage quality from start to finish.</p>
+    </div>
+    <div class="cred-item">
+      <h3>Project Size</h3>
+      <p>Managing multiple concurrent projects valued at $2M–$4M each, with combined annual revenue exceeding $9M. Proven capacity to scale with your portfolio.</p>
+    </div>
+    <div class="cred-item">
+      <h3>Multi-State Delivery</h3>
+      <p>Active projects in Michigan, Ohio, Pennsylvania, and Maryland. We coordinate logistics, crews, and materials across state lines without losing schedule or quality.</p>
+    </div>
+    <div class="cred-item">
+      <h3>Trade Partner Network</h3>
+      <p>A vetted network of 25+ qualified subcontractors and suppliers. We handle sourcing, coordination, COI tracking, and scheduling so you have one point of contact.</p>
+    </div>
+    <div class="cred-item">
+      <h3>Procore Integrated</h3>
+      <p>Full Procore project management for document control, RFIs, submittals, commitments, and change order tracking. Seamless collaboration with your team.</p>
+    </div>
+    <div class="cred-item">
+      <h3>Compliance Ready</h3>
+      <p>Experience with affordable housing programs, Davis-Bacon, Section 3, MBE/WBE participation, and state-specific requirements across our service areas.</p>
     </div>
   </div>
+</div>
 </section>
 
-<section class="services-bg" id="services">
-  <div class="container">
-    <span class="section-label">What We Do</span>
-    <h2 class="section-title">Full-Scope Renovation Services</h2>
-    <p class="section-subtitle">Everything your project needs under one roof &mdash; from structural work to interior finishes.</p>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">&#x1F3D7;</div>
-        <h3>Large-Scale Rehab</h3>
-        <p>Full-building renovations including unit turns, common area upgrades, and structural rehabilitation for $4M+ projects.</p>
+<!-- ===== VALUES ===== -->
+<section class="values" id="values">
+<div class="container">
+  <div class="section-title">Our Approach</div>
+  <p style="color:#555;margin-bottom:24px;max-width:700px">We believe that how you build matters as much as what you build. Our approach is rooted in respect — for the project, the residents, and the relationship.</p>
+  <div class="two-col">
+    <div>
+      <div class="value-item">
+        <h3>Resident-First Construction</h3>
+        <p>We minimize disruption to residents through phased scheduling, clear communication, and coordinated trade sequencing. Our team understands that these are people&rsquo;s homes, not just job sites.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon">&#x1F3E0;</div>
-        <h3>Exterior Systems</h3>
-        <p>Roofing (silicone, silver, full replacement), siding, window and door installation, concrete and pavement work.</p>
+      <div class="value-item">
+        <h3>Reliability Over Lowest Bid</h3>
+        <p>We do not chase volume. We take on work we can execute well, communicate honestly about timelines and budgets, and show up every day until the job is done.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon">&#x1FA93;</div>
-        <h3>Interior Finishes</h3>
-        <p>Flooring, painting, kitchen and bath renovations, countertop reglazing, trim and finish carpentry.</p>
+    </div>
+    <div>
+      <div class="value-item">
+        <h3>Quality Materials & Workmanship</h3>
+        <p>We use products and materials that enhance resident wellbeing and building performance. From energy-efficient windows to durable flooring and finishes, we build to last.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon">&#x1F4CB;</div>
-        <h3>Subcontractor Management</h3>
-        <p>We source, manage, and pay qualified trade partners. One point of contact, one invoice, fully managed.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">&#x1F527;</div>
-        <h3>Maintenance Programs</h3>
-        <p>Ongoing property maintenance and repair for select long-term partners. Structured, reliable, and fully documented.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">&#x1F4D0;</div>
-        <h3>Pre-Construction Support</h3>
-        <p>Scope development, budgeting, scheduling, and logistics planning to set your project up for success from day one.</p>
+      <div class="value-item">
+        <h3>End-to-End Accountability</h3>
+        <p>From pre-construction budgeting and scheduling through final punch list and closeout, one team owns the outcome. No handoffs, no dropped balls, no excuses.</p>
       </div>
     </div>
   </div>
+</div>
 </section>
 
-<section class="clients" id="clients">
-  <div class="container">
-    <span class="section-label">Recent Work</span>
-    <h2 class="section-title">Trusted by GCs &amp; Developers</h2>
-    <p class="section-subtitle">Our relationships speak for themselves. Here&rsquo;s who we&rsquo;re currently building with.</p>
-    <div class="client-grid">
-      <div class="client-card">
-        <h4>Rose Community Builders</h4>
-        <p>Partner since 2020</p>
-        <div class="client-project">Plymouth Square &mdash; $3.6M</div>
-        <div class="client-project">North Port Village &mdash; $1.9M (complete)</div>
-        <div class="client-project">Cambridge Towers &mdash; bidding</div>
-      </div>
-      <div class="client-card">
-        <h4>Ginosko Construction</h4>
-        <p>Partner since 2020</p>
-        <div class="client-project">Greenhouse Apartments &mdash; $2.1M</div>
-        <div class="client-project">Coventry Woods &mdash; $1.3M</div>
-        <div class="client-project">Setter&rsquo;s Point &mdash; active</div>
-      </div>
-      <div class="client-card">
-        <h4>WinnResidential</h4>
-        <p>Ongoing maintenance partner</p>
-        <div class="client-project">Multiple properties across Michigan</div>
-      </div>
+<!-- ===== PROJECTS ===== -->
+<section class="projects" id="projects">
+<div class="container">
+  <div class="section-title">Featured Projects</div>
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>Plymouth Square</h3>
+      <div class="client">Rose Community Builders</div>
+      <div class="desc">High-rise and townhome renovation in Detroit, Michigan. Full-building interior and exterior rehabilitation including window and door replacement, siding, roofing, and unit renovations.</div>
+      <div class="value">Contract: $3.6M</div>
+    </div>
+    <div class="project-card">
+      <h3>North Port Village</h3>
+      <div class="client">Rose Community Builders</div>
+      <div class="desc">Multi-building renovation in Port Huron, Michigan. Complete unit turns, exterior systems, and site improvements.</div>
+      <div class="value">Contract: $1.9M — Completed</div>
+    </div>
+    <div class="project-card">
+      <h3>Greenhouse Apartments</h3>
+      <div class="client">Ginosko Construction</div>
+      <div class="desc">Senior high-rise renovation in Detroit, Michigan. Kitchen and bath renovations, flooring, HVAC, windows, roofing, elevator modernization, and amenity upgrades across 208 units.</div>
+      <div class="value">Contract: $2.1M</div>
+    </div>
+    <div class="project-card">
+      <h3>Coventry Woods</h3>
+      <div class="client">Ginosko Construction</div>
+      <div class="desc">Senior mid-rise renovation in Walker, Michigan. Full interior and exterior upgrades including kitchen and bath renovations, energy efficiency improvements, and accessibility upgrades across 100 units.</div>
+      <div class="value">Contract: $1.3M</div>
+    </div>
+    <div class="project-card">
+      <h3>Art Center Townhomes</h3>
+      <div class="client">Ginosko Construction</div>
+      <div class="desc">Townhome renovation in Detroit, Michigan. Critical repairs, fire and safety improvements, parking lot upgrades, and capital improvements across 60 units.</div>
+      <div class="value">Completed</div>
+    </div>
+    <div class="project-card">
+      <h3>Setter&rsquo;s Point</h3>
+      <div class="client">Ginosko Construction</div>
+      <div class="desc">Active multi-family renovation project. Full-scope rehabilitation currently in progress.</div>
+      <div class="value">Active</div>
     </div>
   </div>
+</div>
 </section>
 
+<!-- ===== CONTACT ===== -->
 <section class="contact" id="contact">
-  <div class="container">
-    <span class="section-label" style="color:#e8755a;">Get in Touch</span>
-    <h2 class="section-title">Let&rsquo;s Talk About Your Next Project</h2>
-    <p class="section-subtitle">We&rsquo;re selective about who we work with because relationships matter more than volume. If you have a multi-family renovation that needs a reliable partner, reach out.</p>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <div class="contact-detail"><strong>Michael Reoch</strong>Managing Director</div>
-        <div class="contact-detail"><strong>Phone</strong><a href="tel:7344544187">(734) 454-4187</a></div>
-        <div class="contact-detail"><strong>Email</strong><a href="mailto:mike@reconenterprises.net">mike@reconenterprises.net</a></div>
-        <div class="contact-detail"><strong>Office</strong>36761 Amrhein Rd, Livonia, MI 48150</div>
-      </div>
-      <div class="contact-info">
-        <h3>Hours</h3>
-        <p>Monday &ndash; Friday: 9am &ndash; 5pm</p>
-        <p>Saturday &amp; Sunday: By appointment</p>
-        <p style="margin-top:24px;font-size:0.9rem;color:rgba(255,255,255,.5);">Michigan &bull; Ohio &bull; Pennsylvania &bull; Maryland</p>
-      </div>
+<div class="container">
+  <div class="section-title">Contact</div>
+  <p style="color:rgba(255,255,255,.6);max-width:600px;">We are selective about the work we take on. If you have a multi-family renovation project that needs a reliable partner, we want to hear from you.</p>
+  <div class="contact-details">
+    <div class="contact-block">
+      <h3>Michael Reoch</h3>
+      <p>Managing Director</p>
+      <p><a href="tel:7344544187">(734) 454-4187</a></p>
+      <p><a href="mailto:mike@reconenterprises.net">mike@reconenterprises.net</a></p>
+      <p style="margin-top:16px">36761 Amrhein Rd<br>Livonia, MI 48150</p>
+    </div>
+    <div class="contact-block">
+      <h3>Service Areas</h3>
+      <p>Michigan</p>
+      <p>Ohio</p>
+      <p>Pennsylvania</p>
+      <p>Maryland</p>
     </div>
   </div>
+</div>
 </section>
 
-<footer><div class="container">&copy; 2026 Recon Enterprises, Inc. All rights reserved.</div></footer>
+<footer>&copy; 2026 Recon Enterprises, Inc. All rights reserved.</footer>
 
 </body>
 </html>
